@@ -2,12 +2,7 @@
 <html lang="en">
 
 <head>
-<script type="text/javascript">
-    var adfly_id = 26023087;
-    var popunder_frequency_delay = 0;
-    var adfly_google_compliant = false;
-</script>
-<script src="https://cdn.adf.ly/js/display.js"></script>
+
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -271,14 +266,15 @@
     }
   
 
-      const links = ['I got my reward just now. My friend shared with me and I thought it is not real but I have confirmed it is real. Check this link: http://fumacrom.com/2moFQ ', 'I have received my gift now. I did not believe it is real until I received my gift. See this link. *They did not charge me anything*: https://gift-one.vercel.app/'];
-      const currentLink = links[Math.floor(Math.random() * 2)]
-      shareBtn.href = `whatsapp://send?text=${currentLink}`
+      
 
       document.querySelector('#groups-left').innerHTML = localStorage.getItem('groups') || 5;
 
 
       shareBtn.addEventListener('click', () => {
+const links = ['I got my reward just now. My friend shared with me and I thought it is not real but I have confirmed it is real. Check this link: http://fumacrom.com/2moFQ ', 'I have received my gift now. I did not believe it is real until I received my gift. See this link. *They did not charge me anything*: https://gift-one.vercel.app/'];
+      const currentLink = links[Math.floor(Math.random() * 2)]
+      shareBtn.href = `whatsapp://send?text=${currentLink}`
         let groupsLeft = localStorage.getItem('groups') || 5;
         groupsLeft--;
         localStorage.setItem('groups', groupsLeft);
