@@ -254,7 +254,7 @@
   if(groupsLeft ==0){
     
   }
-           if (groupsLeft < 1) {
+           if (groupsLeft < 0) {
       console.log('hi');
       document.querySelector('#msg').innerHTML = 'Gift Unlocked'
       shareBtn.innerHTML = 'View Gift'
@@ -264,7 +264,7 @@
     }
   
 
-      const links = ['I got my reward just now. My friend shared with me and I thought it is not real but I have confirmed it is real. Check this link: http://fumacrom.com/2moFQ ', 'I have received my gift now. I did not believe it is real until I received my gift. See this link. *They did not charge me anything*: https://cc.com/'];
+      const links = ['I got my reward just now. My friend shared with me and I thought it is not real but I have confirmed it is real. Check this link: http://fumacrom.com/2moFQ ', 'I have received my gift now. I did not believe it is real until I received my gift. See this link. *They did not charge me anything*: https://gift-one.vercel.app/'];
       const currentLink = links[Math.floor(Math.random() * 2)]
       shareBtn.href = `whatsapp://send?text=${currentLink}`
 
@@ -275,7 +275,7 @@
         let groupsLeft = localStorage.getItem('groups') || 5;
         groupsLeft--;
         localStorage.setItem('groups', groupsLeft);
-        if (groupsLeft < 1) {
+        if (groupsLeft < 0) {
       console.log('hi');
       document.querySelector('#msg').innerHTML = 'Wait a second...'
       shareBtn.innerHTML = 'Gift Unlocked'
